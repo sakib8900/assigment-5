@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    <!-- style -->
+     <style>
+        .font-lexend{
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+     </style>
+</head>
+<body class="font-lexend">
+          <!-- blog section -->
+           <section id="blog-section" class="mt-10 mb-10 p-5 md:p-10">
+            <!-- home section return -->
+            <div class="mb-10">
+                <button id="btn-home" class="text-black btn bg-[#B4F461]">Home</button>
+            </div>
+            <h1 class="font-bold text-3xl">Important FAQ</h1>
+            <div class="flex flex-col mt-10 space-y-10">
+                <!-- 1st question -->
+                <div tabindex="0" class="collapse collapse-arrow border-2">
+                    <div class="collapse-title text-xl font-medium text-blue-300">What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                      <p>DOM is a Programming Interface for HTML documents.
+                        Document means- Data file
+                        Object means- Each element of a web page
+                        Model means- Representational structure
+                      </p>
+                    </div>
+                  </div>
+                <!-- 2nd question -->
+                <div tabindex="0" class="collapse collapse-arrow border-2 ">
+                    <div class="collapse-title text-xl font-medium text-blue-300">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                      <p>1st i select a id,class etc.. then i use document.getElementBy___("myElement tag")</p>
+                    </div>
+                  </div>
+                <!-- 3rd question -->
+                <div tabindex="0" class="collapse collapse-arrow border-2">
+                    <div class="collapse-title text-xl font-medium text-blue-300">What is event delegation in the context of the DOM, and why is it useful?</div>
+                    <div class="collapse-content">
+                      <p>Event delegation is a technique in js where i take advantage of event bubbling to manage events efficiently and it's useful because - it handling Dynamically added elements,performance,efficient memory usage..</p>
+                    </div>
+                  </div>
+                <!-- 4th question -->
+                <div tabindex="0" class="collapse collapse-arrow border-2">
+                    <div class="collapse-title text-xl font-medium text-blue-300">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                      <p>To manipulate an element's attributes to use methods. exp- const element = document.getElementById("myElement");
+                        const value = element.getAttribute("class");
+                        how to add a styles - element.style.backgroundColor = "blue"; etc.. 
+                      </p>
+                    </div>
+                  </div>
+            </div>
+           </section>
+     </main>
+     <script src="js/home.js"></script>
+</body>
+</html>
