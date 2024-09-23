@@ -4,7 +4,7 @@ function getInputValueById(id){
 }
 // blog html jawar jnno code
 const blogContainer = document.getElementById("btn-blog").addEventListener('click', function(){
-    window.location.href = './blog.html'
+    window.location.href = '/blog.html'
 });
 
 // work str
