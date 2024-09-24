@@ -16,9 +16,14 @@ function addDonationHistory(cause, amount){
             <h2 class="font-bold">${amount} Taka is Donated for ${cause}</h2>
             <p>Date: ${new Date()}</p>
         </div>
+        <br>
     `;
     historySection.innerHTML += newEntry;
 }
+
+// congress
+
+
 // function for all card section
 
 function getAllDonation(inputId, addedTkId, totalAmountId, cause){
@@ -35,7 +40,10 @@ function getAllDonation(inputId, addedTkId, totalAmountId, cause){
         alert("you do not have enough money for donate");
         return;
     }
-
+    if(donationAmount > 0 ){
+        document.getElementById("my_modal_5").showModal();
+    }
+    // 
     // calculation
     const addedTk = document.getElementById(addedTkId);
     addedTk.innerText = donationAmount;
@@ -45,7 +53,9 @@ function getAllDonation(inputId, addedTkId, totalAmountId, cause){
     totalAmountElement.innerText = remainingBalance;
 
     // donation history called
-    addDonationHistory(cause, donationAmount)
+    addDonationHistory(cause, donationAmount);
+
+    document.getElementById(inputId).value = '';
 }
 
 // called function for card
@@ -113,3 +123,12 @@ document.getElementById("btn-donation").addEventListener('click',function(){
 
     document.getElementById("btn-donation").classList.add("text-black", "bg-[#B4F461]")
 })
+
+
+// document.getElementById("close-btn").addEventListener('click',function(){
+//     document.getElementById("congress").classList.add("hidden")
+// });
+
+// document.getElementById("btn-history").addEventListener('click', function(){
+//     document.getElementById("congress").classList.add("hidden")
+// })
