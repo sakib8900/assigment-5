@@ -2,6 +2,7 @@
 function getInputValueById(id){
     return parseFloat(document.getElementById(id).value);
 }
+
 // blog html jawar jnno code
 const blogContainer = document.getElementById("btn-blog").addEventListener('click', function(){
     window.location.href = './blog.html'
@@ -20,9 +21,6 @@ function addDonationHistory(cause, amount){
     `;
     historySection.innerHTML += newEntry;
 }
-
-// congress
-
 
 // function for all card section
 
@@ -43,17 +41,20 @@ function getAllDonation(inputId, addedTkId, totalAmountId, cause){
     if(donationAmount > 0 ){
         document.getElementById("my_modal_5").showModal();
     }
-    // 
+
     // calculation
-    const addedTk = document.getElementById(addedTkId);
-    addedTk.innerText = donationAmount;
+    const addedTkElement = document.getElementById(addedTkId);
+    const currentAddedTk = parseFloat(addedTkElement.innerText);
+
+    const newAddedTk = currentAddedTk + donationAmount;
+    addedTkElement.innerText = newAddedTk.toFixed(2);
 
     const remainingBalance = totalAmount - donationAmount;
     const totalAmountElement = document.getElementById(totalAmountId);
-    totalAmountElement.innerText = remainingBalance;
+    totalAmountElement.innerText = remainingBalance.toFixed(2);
 
     // donation history called
-    addDonationHistory(cause, donationAmount);
+    addDonationHistory(cause, donationAmount.toFixed(2));
 
     document.getElementById(inputId).value = '';
 }
@@ -100,7 +101,7 @@ document.getElementById("btn-quota").addEventListener('click', function() {
     // addedBacaTk.innerText = baciJawaTk;
 // })
 
-// ey code history btn r jonno
+// history btn r jonno
 document.getElementById("btn-history").addEventListener('click', function(){
     document.getElementById("card-section").classList.add("hidden");
     document.getElementById("history").classList.remove("hidden")
@@ -113,7 +114,7 @@ document.getElementById("btn-history").addEventListener('click', function(){
 
 })
 
-// ey code donation btn back jawr jnno
+// donation btn back jawr jnno
 document.getElementById("btn-donation").addEventListener('click',function(){
 
     document.getElementById("card-section").classList.remove("hidden");
@@ -124,11 +125,3 @@ document.getElementById("btn-donation").addEventListener('click',function(){
     document.getElementById("btn-donation").classList.add("text-black", "bg-[#B4F461]")
 })
 
-
-// document.getElementById("close-btn").addEventListener('click',function(){
-//     document.getElementById("congress").classList.add("hidden")
-// });
-
-// document.getElementById("btn-history").addEventListener('click', function(){
-//     document.getElementById("congress").classList.add("hidden")
-// })
